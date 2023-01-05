@@ -1,0 +1,244 @@
+/* # Front-end Style Guide
+
+## Layout
+
+The designs were created to the following widths:
+
+- Mobile: 375px
+- Desktop: 1440px
+
+## Colors
+
+### Primary
+
+- Violet: hsl(257, 40%, 49%)
+- Soft Magenta: hsl(300, 69%, 71%)
+
+## Typography
+
+### Headings
+
+- Family: [Poppins](https://fonts.google.com/specimen/Poppins)
+- Weights: 400, 600
+
+### Body
+
+- Family: [Open Sans](https://fonts.google.com/specimen/Open+Sans)
+- Weights: 400
+
+## Icons
+
+For the social icons, you can use a font icon library. Some suggestions can be found below:
+
+- [Font Awesome](https://fontawesome.com/)
+- [IcoMoon](https://icomoon.io/)
+- [Ionicons](https://ionicons.com/) */
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@400;600&display=swap");
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root {
+  font-size: 62.5%;
+  --fw-regular: 400;
+  --fw-semibold: 600;
+  --clr-violet: hsl(257, 40%, 49%);
+  --clr-soft-magenta: hsl(300, 69%, 71%);
+  --clr-white: hsl(0, 0%, 100%);
+  --ff-base: "Open Sans", sans-serif;
+  --ff-headings: "Poppins", sans-serif;
+}
+body {
+  font-family: var(--ff-base);
+  font-weight: var(--fw-regular);
+  background-color: var(--clr-violet);
+}
+*,
+a,
+p {
+  color: var(--clr-white);
+  font-family: "Poppins", sans-serif;
+  font-size: 1.5rem;
+  font-weight: var(--fw-regular);
+  text-decoration: none;
+  margin: 0px;
+}
+h1 {
+  line-height: 4.8rem;
+  font-size: 2.8rem;
+  font-weight: var(--fw-semibold);
+}
+
+.container {
+  background-image: url("./images/bg-mobile.svg");
+  background-repeat: no-repeat;
+  background-position: top center;
+  background-size: cover;
+
+  padding-left: 3rem;
+  padding-right: 3rem;
+}
+.container .container__top {
+  padding-top: 3rem;
+}
+.container__top--logo {
+  height: 2.4rem;
+  width: 14.7rem;
+}
+.container__middle {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+}
+.container__middle--desc,
+.container__middle--hero-img {
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+.container__middle--hero-img {
+  margin-top: 6.6rem;
+  width: auto;
+}
+.container__middle--hero-img img {
+  height: 21rem;
+  width: 30rem;
+}
+.container__middle--desc {
+  margin-top: 2rem;
+}
+.container__middle--desc__heading--title,
+.container__middle--desc__heading--detail {
+  text-align: center;
+}
+.container__middle--desc__heading--detail {
+  margin-top: 1.5rem;
+  width: 30.8rem;
+}
+.register-btn {
+  background-color: var(--clr-white);
+  border-color: transparent;
+  border-radius: 2rem;
+  width: 20rem;
+  margin-top: 4rem;
+  height: 4rem;
+}
+.register-btn p {
+  font-size: 1.7rem;
+  color: var(--clr-violet);
+}
+.register-btn:hover {
+  background-color: var(--clr-soft-magenta);
+  color: var(--clr-violet);
+}
+.container__bottom {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  margin-top: 7rem;
+}
+.facebook,
+.twitter,
+.instagram {
+  background-color: transparent;
+  border: 2px solid var(--clr-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3.6rem;
+  width: 3.6rem;
+  margin: 0 0.9rem;
+}
+ion-icon {
+  height: 2.5rem;
+  width: 2.5rem;
+  margin-top: 0.5rem;
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  .container__middle--desc__heading--title {
+    line-height: 6rem;
+    font-size: 4.5rem;
+    width: 50.5rem;
+  }
+  .container {
+    background-image: url("./images/bg-mobile.svg");
+    background-position: top;
+    background-repeat: no-repeat;
+    background-size: cover;
+    padding: 2rem 8rem;
+  }
+  .container__middle--hero-img img {
+    height: 32rem;
+    width: 45rem;
+  }
+  .container__middle--desc {
+    align-items: center;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 1rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    line-height: 6rem;
+    font-size: 4.5rem;
+    width: 50.5rem;
+  }
+  .container {
+    background-image: url("./images/bg-desktop.svg");
+    background-position: top center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    padding: 2rem 8rem;
+  }
+  .container__middle {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .container__middle--hero-img img {
+    width: 45.9rem;
+    height: 69.5rem;
+  }
+
+  .container__middle--desc {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 7rem;
+    max-width: 52.6rem;
+    flex-wrap: wrap;
+  }
+  .container__middle--desc__heading--title,
+  .container__middle--desc__heading--detail {
+    text-align: left;
+  }
+  .container__middle--desc__heading--detail {
+    width: 52.6rem;
+    font-size: 1.7rem;
+    margin: 1rem 0;
+  }
+  .register-btn {
+    height: 6rem;
+    border-radius: 3rem;
+  }
+  .container__bottom {
+    justify-content: flex-end;
+    margin-top: 4rem;
+    padding-right: 8rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container__middle--hero-img img {
+    width: 69.9rem;
+    height: 69.5rem;
+  }
+}
